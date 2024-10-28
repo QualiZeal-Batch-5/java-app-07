@@ -2,10 +2,10 @@ package com.qualizeal.javaapp07.operation;
 
 public class PalindromeNumber {
 	public String definePalindromeNumber() {
-		return "The Word or number that should be same when it is reversed is called palindrome ";
+		return "a word, verse, or sentence (such as or a number that reads the same backward or forward ";
 	}
 	
-	public String verifyIfNumberIsPalindromeOrNot (int num) {
+	public String verifyIfNumberIsPalindromeOrNot(int num) {
 		if (num <0) {
 			return "-1";
 		}
@@ -17,12 +17,12 @@ public class PalindromeNumber {
 		}
 		else {
 			int temp = num;
-			int result = 0;
+			int ans = 0;
 			while(temp!=0) {
-				result = (result*10) + (temp%10);
+				ans = (ans*10) + (temp%10);
 				temp = temp/10;
 			}
-			if (result==num) {
+			if (ans==num) {
 				return "Palindrome Number";
 			}
 			else {

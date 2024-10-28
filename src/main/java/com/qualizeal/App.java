@@ -7,7 +7,7 @@ public class App {
 		
 		PalindromeNumber palindromeNumber = new PalindromeNumber();
 		
-		System.out.println(palindromeNumber.definePalindromeNumber());
-		System.out.println(palindromeNumber.verifyIfNumberIsPalindromeOrNot(44));
+		String result = palindromeNumber.verifyIfNumberIsPalindromeOrNot(44);
+		System.out.println(result);
 	}
 }
