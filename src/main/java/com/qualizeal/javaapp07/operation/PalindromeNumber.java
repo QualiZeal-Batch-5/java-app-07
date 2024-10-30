@@ -2,35 +2,37 @@ package com.qualizeal.javaapp07.operation;
 
 public class PalindromeNumber {
 	public String definePalindromeNumber() {
-		return "The Word or number that should be same when it is reversed is called palindrome ";
+		return "A palindrome number is a number that remains the same when its digits are reversed.";
 	}
 	
-	public String verifyIfNumberIsPalindromeOrNot (int num) {
-		if (num <0) {
-			return "-1";
-		}
-		else if (num ==0 ) {
-			return "-2";
-		}
-		else if (num>0 && num<10) {
-			return "-3";
-		}
-		else {
+	public String verifyIfNumberIsPalindromeOrNot (int num){
+		if(num < 0) return "-1";
+		
+		else if(num == 0) return "-2";
+		
+		else if(num < 10) return "-3";
+		
+		else{
+			String result = "";
+			int rem;
+			int reverse = 0;
 			int temp = num;
-			int result = 0;
-			while(temp!=0) {
-				result = (result*10) + (temp%10);
-				temp = temp/10;
+			
+			while(num != 0){
+				rem = num % 10;
+				num /= 10;
+				reverse = (reverse * 10) + rem;
 			}
-			if (result==num) {
-				return "Palindrome Number";
+			
+			if(temp == reverse){
+				result = "Palindrome Number";
 			}
-			else {
-				return "Not a Palindrome Number";
+			else{
+				result = "Not a Palindrome Number";
 			}
+			
+			return result;
 		}
-		
-		
 	}
 
 }
